@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aduan Warga - KasWarga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { 
+                        bcaBlue: '#005AAA',
+                        bcaOrange: '#F26522',
+                        lightBg: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <style> body { padding-bottom: 80px; } </style>
+</head>
+<body class="bg-lightBg text-slate-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-white px-5 py-4 flex items-center gap-4 sticky top-0 z-40 shadow-sm">
+        <a href="index.html" class="text-slate-600 w-8 h-8 flex items-center justify-center rounded-full bg-slate-50">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div>
+            <h1 class="text-lg font-bold leading-none">Aduan Warga</h1>
+            <p class="text-[10px] text-slate-500 font-medium mt-0.5">Sampaikan keluhan lingkungan</p>
+        </div>
+    </header>
+
+    <main class="px-5 pt-6">
+        
+        <!-- Tombol Lapor -->
+        <a href="https://wa.me/6281234567890?text=Halo%20Pak%20RT,%20saya%20warga%20ingin%20melaporkan%20masalah%20di%20lingkungan%20RT." target="_blank" class="block bg-bcaBlue text-white rounded-2xl p-5 shadow-lg shadow-blue-200 mb-8 hover:bg-blue-700 transition-all">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-plus text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm">Buat Laporan Baru</h3>
+                    <p class="text-[10px] text-blue-100">Laporkan masalah langsung ke WhatsApp RT</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- List Aduan -->
+        <h3 class="font-bold text-sm text-slate-700 mb-4">Laporan Anda</h3>
+        
+        <div class="space-y-4">
+            <!-- Item 1 -->
+            <div class="bg-white border border-slate-200 rounded-xl p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-sm">Lampu Jalan Mati</h4>
+                    <span class="text-[9px] font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full uppercase">Diproses</span>
+                </div>
+                <p class="text-xs text-slate-500 mb-3">Lampu di depan blok A12 padam total sejak kemarin malam.</p>
+                <p class="text-[10px] text-slate-400"><i class="fa-solid fa-clock mr-1"></i> 27 Juni 2026</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white border border-slate-200 rounded-xl p-4 opacity-75">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-bold text-sm">Pohon Tumbang</h4>
+                    <span class="text-[9px] font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded-full uppercase">Selesai</span>
+                </div>
+                <p class="text-xs text-slate-500 mb-3">Pohon di taman depan sudah dievakuasi.</p>
+                <p class="text-[10px] text-slate-400"><i class="fa-solid fa-clock mr-1"></i> 20 Juni 2026</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Nav - Copy paste ini ke semua file lu -->
+<nav class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 flex justify-around items-center pt-2 pb-safe-bottom z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+    <a href="index.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-house text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="tagihan.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-file-invoice-dollar text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Tagihan</span>
+    </a>
+    <a href="kas.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-chart-pie text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Kas</span>
+    </a>
+    <a href="aduan.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-bullhorn text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Aduan</span>
+    </a>
+</nav>
+</body>
+</html>

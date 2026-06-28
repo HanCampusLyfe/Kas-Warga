@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kas Warga - Transparansi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { 
+                        bcaBlue: '#005AAA',
+                        bcaOrange: '#F26522',
+                        lightBg: '#F8FAFC',
+                        moneyGreen: '#16A34A',
+                        expenseRed: '#DC2626'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { padding-bottom: 80px; }
+    </style>
+</head>
+<body class="bg-lightBg text-slate-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-white px-5 py-4 flex items-center gap-4 sticky top-0 z-40 shadow-sm">
+        <a href="index.html" class="text-slate-600 w-8 h-8 flex items-center justify-center rounded-full bg-slate-50">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div>
+            <h1 class="text-lg font-bold leading-none">Kas Lingkungan</h1>
+            <p class="text-[10px] text-slate-500 font-medium mt-0.5">Griya Mawar - RT 05</p>
+        </div>
+    </header>
+
+    <main class="px-5 pt-6">
+        
+        <!-- Saldo Total -->
+        <div class="bg-bcaBlue text-white rounded-2xl p-6 shadow-lg shadow-blue-200 mb-6">
+            <p class="text-blue-200 text-xs font-medium mb-1">Saldo Kas Saat Ini</p>
+            <h2 class="text-3xl font-extrabold tracking-tight">Rp 12.450.000</h2>
+            <p class="text-[10px] text-blue-200 mt-2 font-medium">Update terakhir: 28 Juni 2026</p>
+        </div>
+
+        <!-- Filter & Header Riwayat -->
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="font-bold text-sm">Riwayat Transaksi</h3>
+            <button class="text-[10px] font-bold text-bcaBlue bg-blue-50 px-3 py-1 rounded-full">Juni 2026</button>
+        </div>
+
+        <!-- List Transaksi -->
+        <div class="space-y-3">
+            
+            <!-- Item 1: Uang Masuk -->
+            <div class="bg-white border border-slate-100 rounded-xl p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-green-50 text-moneyGreen flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-800">Iuran Warga</h4>
+                        <p class="text-[10px] text-slate-500">20 KK x 150rb</p>
+                    </div>
+                </div>
+                <p class="font-bold text-sm text-moneyGreen">+ Rp 3.000.000</p>
+            </div>
+
+            <!-- Item 2: Uang Keluar -->
+            <div class="bg-white border border-slate-100 rounded-xl p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-red-50 text-expenseRed flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-arrow-up text-xs"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-800">Beli Sapu & Trashbag</h4>
+                        <p class="text-[10px] text-slate-500">Kebutuhan Kerja Bakti</p>
+                    </div>
+                </div>
+                <p class="font-bold text-sm text-expenseRed">- Rp 150.000</p>
+            </div>
+
+        </div>
+
+    </main>
+
+<!-- Bottom Nav - Copy paste ini ke semua file lu -->
+<nav class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 flex justify-around items-center pt-2 pb-safe-bottom z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+    <a href="index.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-house text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="tagihan.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-file-invoice-dollar text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Tagihan</span>
+    </a>
+    <a href="kas.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-chart-pie text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Kas</span>
+    </a>
+    <a href="aduan.html" class="flex flex-col items-center p-2 text-slate-400 hover:text-bcaBlue w-16">
+        <i class="fa-solid fa-bullhorn text-xl mb-1"></i>
+        <span class="text-[10px] font-medium">Aduan</span>
+    </a>
+</nav>
+
+</body>
+</html>
